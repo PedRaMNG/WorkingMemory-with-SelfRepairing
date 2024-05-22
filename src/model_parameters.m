@@ -129,7 +129,7 @@ function [params] = model_parameters(need_set)
     params.Eta_syn = 0.02;      
     % Being excitatory or inhibitory synapse
     params.Esyn = 0;            % presynaptic neuorn voltage
-    params.ksyn = 0.2;          % Slope of the synaptic activation function
+    params.ksyn = 0.2;          % Slope of the synaptic activation function (S_syn)
     % Astrocyte modulation parameter for WM
     params.Eta_WM = 0.4;
     
