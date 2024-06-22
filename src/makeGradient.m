@@ -1,10 +1,8 @@
 function COLORS = makeGradient(numofColors, mainColors, locs, showOrNot)
-    % Author: A. Delavar
     % numofColors denote the number of colors in output
-    % mainColors also connote the gradient colors from left to right
+    % mainColors also denote the gradient colors from left to right
     % locs provides an option to set position of colors
     % if showOrNot is set true, the result of gradient will be shown.
-    % the provided outputes is reported as COLORS variable
     
     numofGrads    = size(mainColors, 1) - 1;
     cols        = zeros(numofGrads, 1);
