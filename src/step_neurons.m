@@ -71,7 +71,7 @@ function model = step_neurons(model, params, i)
     %% Neuron synaptic currents
     mask = zeros(params.quantity_neurons, 1, 'logical');
     mask(V > params.neuron_fired_thr - 1) = 1;
-    S = 1 ./ (1 + exp((-V ./ params.ksyn)));
+    S = 1 ./ (1 + exp((-V ./ params.Ssyn)));
 
     gsync = ST1' .* (params.Eta_syn +I_WM(Post) .* Gli_global_expand_line(Post) .* params.Eta_WM ...
                     + (I_SR(Post) .* params.Eta_SR) .* (params.SelfRepair == 1) );

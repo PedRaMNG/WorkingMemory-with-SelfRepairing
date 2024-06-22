@@ -127,16 +127,13 @@ function [params] = model_parameters(need_set)
     params.beta = 5;
     % Synaptic weight without astrocytic influence:
     params.Eta_syn = 0.02;      
-    % Being excitatory or inhibitory synapse
     params.Esyn = 0;            % presynaptic neuorn voltage
-    params.ksyn = 0.2;          % Slope of the synaptic activation function (S_syn)
-    % Astrocyte modulation parameter for WM
-    params.Eta_WM = 0.4;
+    params.Ssyn = 0.2;          % Slope of the synaptic activation function (S_syn)
+    params.Eta_WM = 0.4;        % Astrocyte modulation parameter for WM
     
     %% Neuron-Astrocyte
     params.t_neuro = 0.06;        % Global Astrocyte modulation duration (second)
     params.amplitude_neuro = 5;   % Astrocyte input
-    params.amplitude_neuro2 = 6; % should be removed
     params.gamma_glu = 0.4;      
     params.gamma_AG = 0.6;       
     
